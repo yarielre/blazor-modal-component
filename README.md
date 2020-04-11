@@ -1,4 +1,4 @@
-## Component Modal Implementation Example
+## Blazor Component Modal Implementation Example
 
 ##### Use and shows blazor component features like:
 
@@ -7,7 +7,4 @@
 - EventCallback
 - Child content fragment renderer
 
-
-
-[Official Documentation]: https://docs.microsoft.com/en-us/aspnet/core/blazor/event-handling?view=aspnetcore-3.1
-
+[Official Documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/event-handling?view=aspnetcore-3.1)
