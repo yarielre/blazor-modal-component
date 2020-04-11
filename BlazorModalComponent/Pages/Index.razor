@@ -1,0 +1,58 @@
+﻿@page "/"
+
+    <div class="container p-2">
+        <h1>Component Modal Implementation Example</h1>
+        <div class="mt-4">
+            <h3>Using blazor component features like: </h3>
+            <ul class="list-group">
+                <li class="list-group-item">Event handling</li>
+                <li class="list-group-item">Lambda expressions</li>
+                <li class="list-group-item">EventCallback</li>
+                <li class="list-group-item">Child content fragment renderer</li>
+            </ul>
+        </div>
+        <Modal @ref="Modal" Title="Confirmation Modal" OnSaveCallback="@OnModalSave">
+            <p>Do you want yo save the changes?</p>
+        </Modal>
+
+        <button class="btn btn-dark w-100 mt-4" @onclick="OnModalOpen">Open Modal</button>
+
+        <a class="btn w-100 mt-4" href="https://docs.microsoft.com/en-us/aspnet/core/blazor/event-handling?view=aspnetcore-3.1">Ufficial documentation</a>
+
+        @{
+            if (ModalSaved)
+            {
+                <div class="alert alert-primary p-2 mt-3" role="alert">
+                    Modal operations saved!
+                </div>
+            }
+        }
+    </div>
+@code {
+
+    private bool ModalSaved { get; set; }
+
+    /// <summary>
+    /// Model reference to the Modal component
+    /// </summary>
+    private Modal Modal { get; set; }
+
+    /// <summary>
+    /// On Save event in to the modal component
+    /// </summary>
+    /// <param name="args"></param>
+    private void OnModalSave(MouseEventArgs args)
+    {
+        ModalSaved = true;
+        StateHasChanged();
+    }
+
+    private void OnModalOpen()
+    {
+        ModalSaved = false;
+        Modal.Open();
+        StateHasChanged();
+    }
+
+}
+
