@@ -7,4 +7,9 @@
 - EventCallback
 - Child content fragment renderer
 
-[Official Documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/event-handling?view=aspnetcore-3.1)
+        
+[Demo]: https://blazormodalcomponentdemo.azurewebsites.net
+
+
+[Official Documentation]: https://docs.microsoft.com/en-us/aspnet/core/blazor/event-handling?view=aspnetcore-3.1
+
